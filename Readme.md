@@ -1,7 +1,7 @@
 # Личный проект «Что посмотреть» [![Build status][travis-image]][travis-url]
 
 * Студент: [Ilona Khafizova](https://up.htmlacademy.ru/react/3/user/838037).
-* Наставник: `Неизвестно`.
+* Наставник: `Константин Мамаев`.
 
 ---
 
