@@ -9,6 +9,6 @@ const Settings = {
 };
 
 ReactDOM.render(
-  <App name={Settings.NAME} genre={Settings.GENRE} date={Settings.DATE}/>,
-  document.getElementById(`root`)
+    <App name={Settings.NAME} genre={Settings.GENRE} date={Settings.DATE}/>,
+    document.getElementById(`root`)
 );
