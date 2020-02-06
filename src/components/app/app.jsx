@@ -9,7 +9,7 @@ const App = (props) => {
   } = props;
 
   return (
-    <Main name={name} genre={genre} date={date}/>
+    <Main {...props}/>
   );
 };
 
