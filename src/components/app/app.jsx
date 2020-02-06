@@ -2,12 +2,11 @@ import React from "react";
 import Main from "../main/main.jsx";
 
 const App = (props) => {
-  // eslint-disable-next-line react/prop-types
-  const {name} = props;
-  // eslint-disable-next-line react/prop-types
-  const {genre} = props;
-  // eslint-disable-next-line react/prop-types
-  const {date} = props;
+  const {
+    name, //eslint-disable-line
+    genre, //eslint-disable-line
+    date //eslint-disable-line
+  } = props;
 
   return (
     <Main name={name} genre={genre} date={date}/>
