@@ -10,7 +10,10 @@ const Main = (props) => {
 
   return (
     // <p>{name} {genre} {date}</p>
-    <p>{props.movieNames}</p>
+    // <p>{props.movieNames}</p>
+    props.movieNames.map((i, index) => (
+      <div key={index + i}>{i}</div>
+    ))
   );
 };
 
