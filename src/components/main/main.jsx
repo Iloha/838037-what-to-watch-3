@@ -9,7 +9,7 @@ const Main = (props) => {
       <div
         key={index + i}
         onClick={onTitleClick}
-        className="welcome__button">{i}</div>
+        className="movie__title">{i}</div>
     ))
   );
 };

@@ -8,6 +8,7 @@ it(`<Main /> should render movie names`, () => {
   const tree = renderer
     .create(<Main
       movieNames={movieNames}
+      onTitleClick={() => {}}
     />)
     .toJSON();
 

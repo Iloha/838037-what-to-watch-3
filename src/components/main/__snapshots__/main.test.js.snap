@@ -2,13 +2,22 @@
 
 exports[`<Main /> should render movie names 1`] = `
 Array [
-  <div>
+  <div
+    className="movie__title"
+    onClick={[Function]}
+  >
     FFantastic Beasts
   </div>,
-  <div>
+  <div
+    className="movie__title"
+    onClick={[Function]}
+  >
     BBohemian Rhapsody
   </div>,
-  <div>
+  <div
+    className="movie__title"
+    onClick={[Function]}
+  >
     MMacbeth
   </div>,
 ]
