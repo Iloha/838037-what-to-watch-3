@@ -23,5 +23,5 @@ it(`Should title be pressed`, () => {
 
   title.props().onClick();
 
-  expect(onTitleClick.mock.calls.length).toBe(1);
+  expect(onTitleClick).toHaveBeenCalledTimes(1);
 });
