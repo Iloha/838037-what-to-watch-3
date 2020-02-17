@@ -2,17 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Main = (props) => {
-  // const {
-  //   name,
-  //   genre,
-  //   date
-  // } = props;
+  const {onTitleClick, movieNames} = props;
 
   return (
-    // <p>{name} {genre} {date}</p>
-    // <p>{props.movieNames}</p>
-    props.movieNames.map((i, index) => (
-      <div key={index + i}>{i}</div>
+    movieNames.map((i, index) => (
+      <div
+        key={index + i}
+        onClick={onTitleClick}
+        className="welcome__button">{i}</div>
     ))
   );
 };
@@ -20,7 +17,8 @@ const Main = (props) => {
 Main.propTypes = {
   movieNames: PropTypes.arrayOf(
       PropTypes.string
-  )
+  ),
+  onTitleClick: PropTypes.func.isRequired,
 };
 
 export default Main;
