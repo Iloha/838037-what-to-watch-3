@@ -22,4 +22,5 @@ Main.propTypes = {
       PropTypes.string
   )
 };
+
 export default Main;
