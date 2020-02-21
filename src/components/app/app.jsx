@@ -1,28 +1,26 @@
-import React from "react";
-import {Switch, Route, BrowserRouter} from "react-router-dom";
+import React, {PureComponent} from "react";
 import Main from "../main/main.jsx";
 import PropTypes from "prop-types";
 
-const titleClick = () => {};
+class App extends PureComponent {
+  constructor(props) {
+    super(props);
+  }
 
-const App = (props) => {
-  const {movieNames} = props;
-  const {films} = props;
+  render() {
+    const cardOhHover = () => {};
+    const {films} = this.props;
 
-
-  return (
-    <Main
-      movieNames={movieNames}
-      onTitleClick={titleClick}
-      films={films}
-    />
-  );
-};
+    return (
+      <Main
+        cardOhHover={cardOhHover}
+        films={films}
+      />
+    );
+  }
+}
 
 App.propTypes = {
-  movieNames: PropTypes.arrayOf(
-      PropTypes.string
-  ),
   films: PropTypes.array.isRequired,
 };
 

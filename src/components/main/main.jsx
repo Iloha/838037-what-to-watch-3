@@ -3,18 +3,15 @@ import PropTypes from "prop-types";
 import MovieList from "../movie-list/movie-list.jsx";
 
 const Main = (props) => {
-  const {films} = props;
+  const {films, cardOhHover} = props;
 
   return (
-    <MovieList films={films}/>
+    <MovieList films={films} cardOhHover={cardOhHover}/>
   );
 };
 
 Main.propTypes = {
-  movieNames: PropTypes.arrayOf(
-      PropTypes.string
-  ),
-  onTitleClick: PropTypes.func.isRequired,
+  cardOhHover: PropTypes.func,
   films: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
     genre: PropTypes.string,

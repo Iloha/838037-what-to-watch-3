@@ -2,13 +2,19 @@ import React from "react";
 import renderer from "react-test-renderer";
 import Main from "./main.jsx";
 
-const movieNames = [`FFantastic Beasts`, `BBohemian Rhapsody`, `MMacbeth`];
+const films = [
+  {
+    name: `Fantastic Beasts: The Crimes of Grindelwald`,
+    genre: `comedy`,
+    preview: `fantastic-beasts-the-crimes-of-grindelwald.jpg`
+  }
+];
 
-it(`<Main /> should render movie names`, () => {
+it(`<Main /> should render MovieList component`, () => {
   const tree = renderer
     .create(<Main
-      movieNames={movieNames}
-      onTitleClick={() => {}}
+      films={films}
+      cardOhHover={() => {}}
     />)
     .toJSON();
 
