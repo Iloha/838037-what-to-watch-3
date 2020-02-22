@@ -14,7 +14,6 @@ it(`<Main /> should render MovieList component`, () => {
   const tree = renderer
     .create(<Main
       films={films}
-      cardOhHover={() => {}}
     />)
     .toJSON();
 
