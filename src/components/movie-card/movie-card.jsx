@@ -1,20 +1,28 @@
-import React from "react";
+import React, {PureComponent} from "react";
 import PropTypes from "prop-types";
 
-const MovieCard = (props) => {
-  const {movieCard, onCardHover} = props;
+class MovieCard extends PureComponent {
+  constructor(props) {
+    super(props);
 
-  return (
-    <article className="small-movie-card catalog__movies-card" onMouseOver={onCardHover}>
-      <div className="small-movie-card__image">
-        <img src={movieCard.preview} alt={movieCard.name} width="280" height="175" />
-      </div>
-      <h3 className="small-movie-card__title">
-        <a className="small-movie-card__link" href="movie-page.html">{movieCard.name}</a>
-      </h3>
-    </article>
-  );
-};
+    this.state = {};
+  }
+
+  render() {
+    const {movieCard, onCardHover} = this.props;
+
+    return (
+      <article className="small-movie-card catalog__movies-card" onMouseOver={onCardHover}>
+        <div className="small-movie-card__image">
+          <img src={movieCard.preview} alt={movieCard.name} width="280" height="175" />
+        </div>
+        <h3 className="small-movie-card__title">
+          <a className="small-movie-card__link" href="movie-page.html">{movieCard.name}</a>
+        </h3>
+      </article>
+    );
+  }
+}
 
 MovieCard.propTypes = {
   movieCard: PropTypes.object,

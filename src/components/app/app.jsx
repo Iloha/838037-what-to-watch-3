@@ -8,12 +8,10 @@ class App extends PureComponent {
   }
 
   render() {
-    const cardOhHover = () => {};
     const {films} = this.props;
 
     return (
       <Main
-        cardOhHover={cardOhHover}
         films={films}
       />
     );
