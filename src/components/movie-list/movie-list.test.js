@@ -1,20 +1,23 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import App from "./app.jsx";
+import MovieList from "./movie-list";
 
 const films = [
   {
     name: `Fantastic Beasts: The Crimes of Grindelwald`,
     genre: `comedy`,
     preview: `fantastic-beasts-the-crimes-of-grindelwald.jpg`
+  },
+  {
+    name: `Bohemian Rhapsody`,
+    genre: `comedy`,
+    preview: `bohemian-rhapsody.jpg`
   }
 ];
 
-it(`<App /> should render <Main /> component`, () => {
+it(`<MovieList /> should render movie list`, () => {
   const tree = renderer
-    .create(<App
-      films={films}
-    />)
+    .create(<MovieList films={films}/>)
     .toJSON();
 
   expect(tree).toMatchSnapshot();

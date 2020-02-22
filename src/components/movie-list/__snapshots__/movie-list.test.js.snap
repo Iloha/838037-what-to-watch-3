@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<App /> should render <Main /> component 1`] = `
+exports[`<MovieList /> should render movie list 1`] = `
 <div
   className="catalog__movies-list"
 >
@@ -26,6 +26,31 @@ exports[`<App /> should render <Main /> component 1`] = `
         href="movie-page.html"
       >
         Fantastic Beasts: The Crimes of Grindelwald
+      </a>
+    </h3>
+  </article>
+  <article
+    className="small-movie-card catalog__movies-card"
+    onMouseOver={[Function]}
+  >
+    <div
+      className="small-movie-card__image"
+    >
+      <img
+        alt="Bohemian Rhapsody"
+        height="175"
+        src="bohemian-rhapsody.jpg"
+        width="280"
+      />
+    </div>
+    <h3
+      className="small-movie-card__title"
+    >
+      <a
+        className="small-movie-card__link"
+        href="movie-page.html"
+      >
+        Bohemian Rhapsody
       </a>
     </h3>
   </article>

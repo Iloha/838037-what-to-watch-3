@@ -1,30 +1,25 @@
-import React from "react";
+import React, {PureComponent} from "react";
 import Main from "../main/main.jsx";
 import PropTypes from "prop-types";
 
-const titleClick = () => {};
+class App extends PureComponent {
+  constructor(props) {
+    super(props);
+  }
 
-const App = (props) => {
-  // const {
-  //   name,
-  //   genre,
-  //   date
-  // } = props;
-  const {movieNames} = props;
+  render() {
+    const {films} = this.props;
 
-
-  return (
-    <Main
-      movieNames={movieNames}
-      onTitleClick={titleClick}
-    />
-  );
-};
+    return (
+      <Main
+        films={films}
+      />
+    );
+  }
+}
 
 App.propTypes = {
-  movieNames: PropTypes.arrayOf(
-      PropTypes.string
-  )
+  films: PropTypes.array.isRequired,
 };
 
 export default App;
