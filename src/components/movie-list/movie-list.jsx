@@ -10,6 +10,7 @@ class MovieList extends PureComponent {
   }
 
   onCardHover(movieCard) {
+    console.log(movieCard)
     this.setState({activeCard: movieCard});
   };
 
@@ -17,7 +18,7 @@ class MovieList extends PureComponent {
     const {films} = this.props;
 
     const movieList = films.map((i, index) => (
-      <MovieCard key={i.name + index} movieCard={i} onCardHover={this.onCardHover.bind(this, i)}/>
+      <MovieCard key={i.name + index} movieCard={i} onCardHover={this.onCardHover}/>
     ));
 
     return (

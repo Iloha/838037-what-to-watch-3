@@ -12,7 +12,7 @@ class MovieCard extends PureComponent {
     const {movieCard, onCardHover} = this.props;
 
     return (
-      <article className="small-movie-card catalog__movies-card" onMouseOver={onCardHover}>
+      <article className="small-movie-card catalog__movies-card" onMouseOver={()=>onCardHover(movieCard)}>
         <div className="small-movie-card__image">
           <img src={movieCard.preview} alt={movieCard.name} width="280" height="175" />
         </div>

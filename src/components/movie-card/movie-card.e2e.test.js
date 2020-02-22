@@ -1,27 +1,32 @@
 import React from "react";
 import Enzyme, {shallow} from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
-import Main from "./main";
+import MovieCard from "./movie-card.jsx";
 
-const movieNames = [`FFantastic Beasts`];
+const movieCard = {
+  name: `Fantastic Beasts: The Crimes of Grindelwald`,
+  genre: `comedy`,
+  preview: `fantastic-beasts-the-crimes-of-grindelwald.jpg`
+};
 
 Enzyme.configure({
   adapter: new Adapter(),
 });
 
 it(`Should title be pressed`, () => {
-  const onTitleClick = jest.fn();
+  const onCardHover = jest.fn();
 
   const main = shallow(
-      <Main
-        movieNames={movieNames}
-        onTitleClick={onTitleClick}
+      <MovieCard
+        movieCard={movieCard}
+        onCardHover={onCardHover}
       />
   );
 
-  const title = main.find(`div.movie__title`);
+  const title = main.find(`article.small-movie-card`);
 
-  title.props().onClick();
+  title.props().onMouseOver();
 
-  expect(onTitleClick).toHaveBeenCalledTimes(1);
+  expect(onCardHover).toHaveBeenCalledTimes(1);
+  expect(onCardHover.mock.calls[0][0]).toMatchObject(movieCard);
 });
