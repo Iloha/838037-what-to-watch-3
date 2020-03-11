@@ -14,7 +14,13 @@ Main.propTypes = {
   films: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
     genre: PropTypes.string,
-    preview: PropTypes.string.isRequired
+    preview: PropTypes.string.isRequired,
+    poster: PropTypes.string.isRequired,
+    score: PropTypes.number,
+    scoreDescription: PropTypes.string,
+    votes: PropTypes.number,
+    director: PropTypes.string.isRequired,
+    actors: PropTypes.array.isRequired,
   }))
 };
 

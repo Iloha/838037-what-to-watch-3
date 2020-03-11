@@ -4,55 +4,103 @@ export default [
     genre: `comedy`,
     year: `1999`,
     poster: `fantastic-beasts-the-crimes-of-grindelwald.jpg`,
-    preview: `fantastic-beasts-the-crimes-of-grindelwald.jpg`
+    preview: `fantastic-beasts-the-crimes-of-grindelwald.jpg`,
+    description: `<p>In the 1930s, the Grand Budapest Hotel is a popular European ski resort, presided over by concierge Gustave H. (Ralph Fiennes). Zero, a junior lobby boy, becomes Gustave's friend and protege.</p> <p>Gustave prides himself on providing first-class service to the hotel's guests, including satisfying the sexual needs of the many elderly women who stay there. When one of Gustave's lovers dies mysteriously, Gustave finds himself the recipient of a priceless painting and the chief suspect in her murder.</p>`,
+    score: 4.5,
+    scoreDescription: `Bad`,
+    votes: 45,
+    director: `Skorseze`,
+    actors: [`Di Caprio`, `Depp`]
   },
   {
     name: `Bohemian Rhapsody`,
     genre: `comedy`,
     year: `1999`,
     poster: `fantastic-beasts-the-crimes-of-grindelwald.jpg`,
-    preview: `bohemian-rhapsody.jpg`
+    preview: `bohemian-rhapsody.jpg`,
+    description: `sfdfs fslfjsljf `,
+    score: 4.5,
+    scoreDescription: `Bad`,
+    votes: 45,
+    director: `Skorseze`,
+    actors: [`Di Caprio`, `Depp`]
   },
   {
     name: `Macbeth`,
     genre: `comedy`,
     year: `1999`,
     poster: `fantastic-beasts-the-crimes-of-grindelwald.jpg`,
-    preview: `macbeth.jpg`
+    preview: `macbeth.jpg`,
+    description: `sfdfs fslfjsljf `,
+    score: 4.5,
+    scoreDescription: `Bad`,
+    votes: 45,
+    director: `Skorseze`,
+    actors: [`Di Caprio`, `Depp`]
   },
   {
     name: `Aviator`,
     genre: `comedy`,
     year: `1999`,
     poster: `fantastic-beasts-the-crimes-of-grindelwald.jpg`,
-    preview: `aviator.jpg`
+    preview: `aviator.jpg`,
+    description: `sfdfs fslfjsljf `,
+    score: 4.5,
+    scoreDescription: `Bad`,
+    votes: 45,
+    director: `Skorseze`,
+    actors: [`Di Caprio`, `Depp`]
   },
   {
     name: `We need to talk about Kevin`,
     genre: `comedy`,
     year: `1999`,
     poster: `fantastic-beasts-the-crimes-of-grindelwald.jpg`,
-    preview: `we-need-to-talk-about-kevin.jpg`
+    preview: `we-need-to-talk-about-kevin.jpg`,
+    description: `sfdfs fslfjsljf `,
+    score: 4.5,
+    scoreDescription: `Bad`,
+    votes: 45,
+    director: `Skorseze`,
+    actors: [`Di Caprio`, `Depp`]
   },
   {
     name: `What We Do in the Shadows`,
     genre: `comedy`,
     year: `1999`,
     poster: `fantastic-beasts-the-crimes-of-grindelwald.jpg`,
-    preview: `what-we-do-in-the-shadows.jpg`
+    preview: `what-we-do-in-the-shadows.jpg`,
+    description: `sfdfs fslfjsljf `,
+    score: 4.5,
+    scoreDescription: `Bad`,
+    votes: 45,
+    director: `Skorseze`,
+    actors: [`Di Caprio`, `Depp`]
   },
   {
     name: `revenant.jpg`,
     genre: `comedy`,
     year: `1999`,
     poster: `fantastic-beasts-the-crimes-of-grindelwald.jpg`,
-    preview: `Revenant`
+    preview: `Revenant`,
+    description: `sfdfs fslfjsljf `,
+    score: 4.5,
+    scoreDescription: `Bad`,
+    votes: 45,
+    director: `Skorseze`,
+    actors: [`Di Caprio`, `Depp`]
   },
   {
     name: `johnny-english.jpg`,
     genre: `comedy`,
     year: `1999`,
     poster: `fantastic-beasts-the-crimes-of-grindelwald.jpg`,
-    preview: `Johnny English`
+    preview: `Johnny English`,
+    description: `sfdfs fslfjsljf `,
+    score: 4.5,
+    scoreDescription: `Bad`,
+    votes: 45,
+    director: `Skorseze`,
+    actors: [`Di Caprio`, `Depp`]
   }
 ];

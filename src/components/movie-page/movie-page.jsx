@@ -7,13 +7,13 @@ class MoviePage extends PureComponent {
   }
 
   render() {
-    // const {movieCard, onCardHover} = this.props;
+    const {movieCard} = this.props;
 
     return (
       <section className="movie-card movie-card--full">
         <div className="movie-card__hero">
           <div className="movie-card__bg">
-            <img src="img/bg-the-grand-budapest-hotel.jpg" alt="The Grand Budapest Hotel" />
+            <img src={movieCard.poster} alt={movieCard.name} />
           </div>
 
           <h1 className="visually-hidden">WTW</h1>
@@ -36,10 +36,10 @@ class MoviePage extends PureComponent {
 
           <div className="movie-card__wrap">
             <div className="movie-card__desc">
-              <h2 className="movie-card__title">The Grand Budapest Hotel</h2>
+              <h2 className="movie-card__title">{movieCard.name}</h2>
               <p className="movie-card__meta">
-                <span className="movie-card__genre">Drama</span>
-                <span className="movie-card__year">2014</span>
+                <span className="movie-card__genre">{movieCard.genre}</span>
+                <span className="movie-card__year">{movieCard.year}</span>
               </p>
 
               <div className="movie-card__buttons">
@@ -64,7 +64,7 @@ class MoviePage extends PureComponent {
         <div className="movie-card__wrap movie-card__translate-top">
           <div className="movie-card__info">
             <div className="movie-card__poster movie-card__poster--big">
-              <img src="img/the-grand-budapest-hotel-poster.jpg" alt="The Grand Budapest Hotel poster" width="218" height="327" />
+              <img src={movieCard.poster} alt={movieCard.name} width="218" height="327" />
             </div>
 
             <div className="movie-card__desc">
@@ -83,21 +83,17 @@ class MoviePage extends PureComponent {
               </nav>
 
               <div className="movie-rating">
-                <div className="movie-rating__score">8,9</div>
+                <div className="movie-rating__score">{movieCard.score}</div>
                 <p className="movie-rating__meta">
-                  <span className="movie-rating__level">Very good</span>
-                  <span className="movie-rating__count">240 ratings</span>
+                  <span className="movie-rating__level">{movieCard.scoreDescription}</span>
+                  <span className="movie-rating__count">{movieCard.votes}</span>
                 </p>
               </div>
 
               <div className="movie-card__text">
-                <p>In the 1930s, the Grand Budapest Hotel is a popular European ski resort, presided over by concierge Gustave H. (Ralph Fiennes). Zero, a junior lobby boy, becomes Gustave's friend and protege.</p>
-
-                <p>Gustave prides himself on providing first-class service to the hotel's guests, including satisfying the sexual needs of the many elderly women who stay there. When one of Gustave's lovers dies mysteriously, Gustave finds himself the recipient of a priceless painting and the chief suspect in her murder.</p>
-
-                <p className="movie-card__director"><strong>Director: Wes Andreson</strong></p>
-
-                <p className="movie-card__starring"><strong>Starring: Bill Murray, Edward Norton, Jude Law, Willem Dafoe and other</strong></p>
+                {movieCard.description}
+                <p className="movie-card__director"><strong>Director: {movieCard.director}</strong></p>
+                <p className="movie-card__starring"><strong>Starring: {movieCard.actors}</strong></p>
               </div>
             </div>
           </div>
@@ -108,8 +104,19 @@ class MoviePage extends PureComponent {
 }
 
 MoviePage.propTypes = {
-  // movieCard: PropTypes.object,
-  // onCardHover: PropTypes.func,
+  movieCard: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    genre: PropTypes.string,
+    preview: PropTypes.string.isRequired,
+    poster: PropTypes.string.isRequired,
+    score: PropTypes.number,
+    scoreDescription: PropTypes.string,
+    votes: PropTypes.number,
+    director: PropTypes.string.isRequired,
+    actors: PropTypes.array.isRequired,
+    description: PropTypes.string,
+    year: PropTypes.string,
+  })
 };
 
 export default MoviePage;

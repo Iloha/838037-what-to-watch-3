@@ -7,6 +7,10 @@ import MoviePage from "../movie-page/movie-page.jsx";
 class App extends PureComponent {
   constructor(props) {
     super(props);
+
+    this.state = {
+      movieCard: null
+    };
   }
 
   _renderApp() {
@@ -20,16 +24,16 @@ class App extends PureComponent {
   }
 
   render() {
+    const {films} = this.props;
 
     return (
       <BrowserRouter>
         <Switch>
           <Route exact path="/">
             {this._renderApp()}
-
           </Route>
-          <Route exact path="/dev-film">
-            <MoviePage />
+          <Route exact path="/movie-page">
+            <MoviePage movieCard={this.state.movieCard}/>
           </Route>
         </Switch>
       </BrowserRouter>
